@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="StudentsManagerFrame">
+  <grid id="27dc6" binding="mainPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
+    <constraints>
+      <xy x="18" y="20" width="502" height="400"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <component id="1b75" class="javax.swing.JButton" binding="addStudentButton">
+        <constraints border-constraint="South"/>
+        <properties>
+          <text value="Add"/>
+        </properties>
+      </component>
+      <scrollpane id="a74b2">
+        <constraints border-constraint="East"/>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="dbf55" class="javax.swing.JList" binding="modifiedDataList">
+            <constraints/>
+            <properties>
+              <model/>
+            </properties>
+          </component>
+        </children>
+      </scrollpane>
+      <scrollpane id="a395c">
+        <constraints border-constraint="West"/>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="399bd" class="javax.swing.JList" binding="originalDataList">
+            <constraints/>
+            <properties>
+              <model/>
+            </properties>
+          </component>
+        </children>
+      </scrollpane>
+      <grid id="a8dbe" layout-manager="BorderLayout" hgap="0" vgap="0">
+        <constraints border-constraint="North"/>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="d5e2f" class="javax.swing.JButton" binding="showButton" default-binding="true">
+            <constraints border-constraint="Center"/>
+            <properties>
+              <text value="Show"/>
+            </properties>
+          </component>
+          <component id="73df2" class="javax.swing.JList" binding="byCourseNumberList">
+            <constraints border-constraint="South"/>
+            <properties/>
+          </component>
+          <component id="e6d72" class="javax.swing.JTextField" binding="courseNumberTextField">
+            <constraints border-constraint="North"/>
+            <properties>
+              <text value=""/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+    </children>
+  </grid>
+</form>

@@ -1,0 +1,5 @@
+CK "cookie" weight=25.5 sugar=15% price=0.6 form=round filling=chocolate
+LP "Lolly pop" weight=20 sugar=20.5% price=2 form=candy_cane color=blue
+CH "chocolate" weight=100 sugar=19.5% price=3.1
+CH "chocolate" weight=90 sugar=25.5% price=2.9 cocoa=72%
+LP "new lolly pop" weight=15 sugar=25% price=1.6 color=green

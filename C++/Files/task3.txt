@@ -1,0 +1,214 @@
+if 25
+while 9
+int 20
+return 5
+true 2
+false 2
+bool 2
+#include<iostream>
+#include<fstream>
+#include<string>
+
+bool checkFileOpen(std::stream & in)
+{
+     (!in.is_open())
+    {
+        std::cout << "Error file open\n";
+        return false;
+    }
+    return true;
+}
+
+int findMax(int a[], size_t size)
+{
+    int max = a[0];
+    int index = 0;
+    for (size_t i = 1; i < size; i++)
+    {
+         (a[i] > max) {
+            max = a[i];
+            index = i;
+        }
+    }
+    return index;
+}
+
+void countKeyWords(std::stream &in,std::ofstream& out, std::string[], int[], size_t);
+void DeleteElements(std::stream &in,std::ofstream &out, std::string[], int);
+void addElement(std::stream &in,std::ofstream &out,std::string before_elem,std::string elem);
+void replaceElements(std::stream&, std::ofstream&,std::string,std::string);
+void convert(double);
+int main()
+{
+    setlocale(LC_ALL,"Russian");
+    {
+        //task1
+        char value1;
+        std::stream in("C:\\Clion projects\\Guseinova\\week5\\main.cpp");
+        std::ofstream out("C:\\Clion projects\\Guseinova\\week5\\task1.txt");
+        std::string before_elem="char",elem="unsigned";
+         (checkFileOpen(in)){
+            addElement(in,out,before_elem,elem);
+        }
+        char value2;
+    }
+
+    {
+        //task2
+        std::stream in("C:\\Clion projects\\Guseinova\\week5\\text.txt");
+        std::ofstream out("C:\\Clion projects\\Guseinova\\week5\\task2.txt");
+         (checkFileOpen(in)) {
+            std::string element="We", replace="THEY";
+            replaceElements(in, out, element, replace);
+        }
+
+    }
+    {
+        //Task3
+        std::stream in("C:\\Clion projects\\Guseinova\\week5\\main.cpp");
+        std::ofstream out("C:\\Clion projects\\Guseinova\\week5\\task3.txt", std::ios::trunc);
+        std::string str;
+        const size_t size = 7;
+        std::string keyWords[size] = {"", "while", "int", "return", "true", "false", "bool"};
+        int countWords[size] = {0};
+
+         (checkFileOpen(in)) {
+            countKeyWords(in, out, keyWords, countWords, size);
+            int index = findMax(countWords, size);
+            DeleteElements(in, out, keyWords, index);
+
+        }
+    }
+    {
+        //task4
+        double num;
+        std::cout<<"Enter a number:";
+        std::cin>>num;
+        convert(num);
+    }
+    return 0;
+}
+
+void countKeyWords(std::stream &in,std::ofstream& out, std::string keyWords[], int countWords[],size_t size)
+{
+    std::string str;
+    while (!in.eof())
+    {
+        getline(in, str);
+        for (size_t i = 0; i < size; i++)
+        {
+            int position = 0;
+            while (position != std::string::npos)
+            {
+                position = str.find(keyWords[i], position);
+                 (position == std::string::npos)
+                {
+                    break;
+                }
+                else
+                {
+                    position++;
+                    countWords[i]++;
+                }
+            }
+        }
+    }
+
+    for (size_t i = 0; i < size; i++)
+    {
+        out << keyWords[i] << " " << countWords[i] << "\n";
+    }
+}
+
+void DeleteElements(std::stream &in,std::ofstream& out,std::string keyWords[], int index){
+    std::string str;
+    in.seekg(0,std::ios::beg);
+    while (!in.eof())
+    {
+        getline(in, str);
+
+        int position = 0;
+        while (position != std::string::npos)
+        {
+            position = str.find(keyWords[index], position);
+             (position == std::string::npos)
+            {
+                break;
+            }
+            else
+            {
+                str.erase(position, keyWords[index].length());
+
+            }
+        }
+        out << str << "\n";
+    }
+}
+
+void addElement(std::stream &in,std::ofstream &out,std::string before_elem,std::string elem){
+   std::string str;
+   int position=0;
+    while(!in.eof()){
+        getline(in,str);
+        while (position != std::string::npos){
+            position=str.find(before_elem[0],position);
+             (position == std::string::npos)
+            {
+                break;
+            }
+            else
+            {
+                str.insert(position,elem);
+            }
+            position++;
+        }
+        out<<str<<"\n";
+    }
+}
+
+void replaceElements(std::stream &in,std::ofstream &out,std::string element,std::string replace){
+    std::string str;
+    while(!in.eof()){
+        getline(in,str);
+        int position=0;
+        while (position != std::string::npos){
+            position=str.find(element,position);
+             (position == std::string::npos)
+            {
+                break;
+            }
+            else
+            {
+                str.replace(position,element.length(),replace);
+            }
+            position+= element.length();
+        }
+        out<<str<<"\n";
+    }
+}
+ void convert(double num){
+    std::string converted = std::to_string(num);
+     int size=converted.length();
+    for(int i=0;i<5;i++){
+        converted.erase(size-i,1);
+    }
+    int new_size=converted.length();
+/*     (converted.length()>5){
+        for(int i=2;i<=new_size-5;i+=3){
+            converted.insert(i," ");
+        }
+    }*/
+      (converted[new_size-4] == '1' ){
+         converted.replace(new_size-3,1,"rubl");
+         converted.insert(converted.length(),"kopeek",0,6);
+     }
+     else  (converted[new_size-4] == '2' || converted[new_size-4] == '3' || converted[new_size-4] == '4') {
+         converted.replace(new_size-3, 1, "rublya");
+         converted.insert(converted.length(),"kopeek",0,6);
+     }
+     else {
+         converted.replace(new_size-3, 1, "rubley");
+         converted.insert(converted.length(), "kopeek", 0, 6);
+     }
+    std::cout<<converted;
+}

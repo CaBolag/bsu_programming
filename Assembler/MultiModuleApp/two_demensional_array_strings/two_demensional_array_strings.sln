@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "two_demensional_array_strings", "two_demensional_array_strings\two_demensional_array_strings.vcxproj", "{E48C88B9-03FA-4494-A8D6-DC8F11870B46}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E48C88B9-03FA-4494-A8D6-DC8F11870B46}.Debug|x64.ActiveCfg = Debug|x64
+		{E48C88B9-03FA-4494-A8D6-DC8F11870B46}.Debug|x64.Build.0 = Debug|x64
+		{E48C88B9-03FA-4494-A8D6-DC8F11870B46}.Debug|x86.ActiveCfg = Debug|Win32
+		{E48C88B9-03FA-4494-A8D6-DC8F11870B46}.Debug|x86.Build.0 = Debug|Win32
+		{E48C88B9-03FA-4494-A8D6-DC8F11870B46}.Release|x64.ActiveCfg = Release|x64
+		{E48C88B9-03FA-4494-A8D6-DC8F11870B46}.Release|x64.Build.0 = Release|x64
+		{E48C88B9-03FA-4494-A8D6-DC8F11870B46}.Release|x86.ActiveCfg = Release|Win32
+		{E48C88B9-03FA-4494-A8D6-DC8F11870B46}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {453AD9B2-152C-4F25-A671-FA4BF43CD392}
+	EndGlobalSection
+EndGlobal

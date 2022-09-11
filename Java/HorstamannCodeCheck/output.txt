@@ -1,0 +1,9 @@
+(Native
+)
+Method)
+at
+at
+java.base/java.io.FileInputStream.
+java.base/java.io.FileInputStream.open
+java:
+open(FileInputStream.

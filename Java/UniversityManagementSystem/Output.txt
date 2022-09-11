@@ -1,0 +1,59 @@
+Course name: Programming
+Academics: Cay Horstmann Paul Deitel
+Students:
+
+Name: p1
+Login: te2
+Email:p1
+Supervisor: Paul Deitel
+ 
+Name: p3
+Login: jj8
+Email:p3
+Supervisor: Cay Horstmann
+ 
+Name: u1
+Login: gg4
+Email: u1
+Tutor: Paul Deitel
+ 
+Name: u2
+Login: pr3
+Email: u2
+Tutor: Cay Horstmann
+ 
+Name: p2
+Login: yj34
+Email:p2
+Supervisor: Cay Horstmann
+
+Postgraduates:
+
+Name: p1
+Login: te2
+Email:p1
+Supervisor: Paul Deitel
+ 
+Name: p3
+Login: jj8
+Email:p3
+Supervisor: Cay Horstmann
+ 
+Name: p2
+Login: yj34
+Email:p2
+Supervisor: Cay Horstmann
+
+Undergraduates:
+
+Name: u1
+Login: gg4
+Email: u1
+Tutor: Paul Deitel
+ 
+Name: u2
+Login: pr3
+Email: u2
+Tutor: Cay Horstmann
+
+
